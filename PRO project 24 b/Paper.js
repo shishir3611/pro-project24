@@ -13,11 +13,11 @@ class Paper{
     }
     display(){
         var pos = this.body.position;
-        push();
-        translate(pos.x, pos.y)
+        //push();
+        //translate(pos.x, pos.y)
         fill('white');
         ellipseMode(RADIUS);
-        ellipse(0,0,this.r,this.r);
-        pop();
+        ellipse(pos.x,pos.y,this.r,this.r);
+        //pop();
     }
 }
