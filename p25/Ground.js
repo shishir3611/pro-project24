@@ -3,9 +3,9 @@ class Ground{
         var options ={
             isStatic: true
         }
-        this.body = Bodies.rectangle(400,690,800,20, options);
+        this.body = Bodies.rectangle(550,690,800,20, options);
         this.height = 20;
-        this.width = 800;
+        this.width = 1100;
         World.add(world, this.body);
     }
     display(){

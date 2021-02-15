@@ -5,19 +5,17 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1100, 700);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
-	Bin1 = new Bin(500,630,20,100);
-	Bin2 = new Bin(610,670,200,20);
-	Bin3 = new Bin(720,630,20,100);
+	Bin1 = new Bin(800,530,250,300);
 	
 	Ground1 = new Ground();
 
-	Paper1 = new Paper(100,500,25);
+	Paper1 = new Paper(200,500,200,200);
 
 	Engine.run(engine);
 }
@@ -25,10 +23,8 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(255);
   Bin1.display();
-  Bin2.display();
-  Bin3.display();
   Ground1.display();
   Paper1.display();
 
@@ -37,7 +33,7 @@ function draw() {
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		Matter.Body.applyForce(Paper1.body, Paper1.body.position, {x: 100, y:-100})
+		Matter.Body.applyForce(Paper1.body, Paper1.body.position, {x: 1500, y:-2300})
 	}
 }
 
